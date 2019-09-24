@@ -10,7 +10,7 @@ MAINTAINER <you>
 # 加快每次构建，不过为了环境干净，初次构建的几分钟是可以接受的。
 #RUN pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache-dir -r /datan_env/requirements.txt
 
-# 采用全申明方式构建，可以加快每次缓存
+# 采用全申明方式构建，可以加快每次缓存    
 # notebook
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache-dir jupyter==1.0.0 
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache-dir pyecharts==0.5.11 jupyter-echarts-pypkg==0.1.2
