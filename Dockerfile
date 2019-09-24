@@ -13,7 +13,7 @@ MAINTAINER <you>
 # 采用全申明方式构建，可以加快每次缓存
 # notebook
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache-dir jupyter==1.0.0 
-RUN pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache-dir pyecharts==0.5.1 jupyter-echarts-pypkg==0.1.2
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache-dir pyecharts==0.5.11 jupyter-echarts-pypkg==0.1.2
 #sklearn
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache-dir scikit-learn==0.19.2 pandas==0.23.4 numpy==1.16.4 seaborn==0.9.0 jieba==0.39 scipy==1.1.0 
 # web及数据库
@@ -24,6 +24,7 @@ RUN jupyter contrib nbextension install --user
 
 # new
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple DBUtils==1.3 elasticsearch==7.0.4
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple gevent==1.4.0
 
 # 工作空间
 WORKDIR /notebookdir
