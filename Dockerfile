@@ -22,6 +22,9 @@ RUN pip install -i https://mirrors.aliyun.com/pypi/simple PyMySQL==0.9.3 Flask==
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple jupyter_contrib_nbextensions==0.5.1
 RUN jupyter contrib nbextension install --user
 
+# test
+RUN pip install -i https://mirrors.aliyun.com/pypi/simple requests==2.22.0
+
 # 工作空间
 WORKDIR /notebookdir
 
