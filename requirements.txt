@@ -1,0 +1,33 @@
+# 数据库相关
+PyMySQL==0.9.3
+
+# web 相关
+Flask==1.0.2
+requests==2.22.0
+
+# pyecharts 相关
+pyecharts==0.5.7
+#echarts-countries-pypkg==0.1.4
+
+# jupyter相关
+jupyter==1.0.0
+jupyter-client==5.2.3
+jupyter-console==5.2.0
+jupyter-core==4.4.0
+ipython==6.5.0
+jupyter-echarts-pypkg==0.1.2
+#jupyter_contrib_nbextensions>=0.0.0
+notebook==5.5.0
+nbconvert==5.3.1
+nbformat==4.4.0
+tornado==5.0.2
+
+# sklearn相关
+scipy==1.1.0
+jieba==0.39
+seaborn==0.9.0
+numpy==1.16.4
+pandas==0.23.4
+scikit-learn==0.19.2
+
+# 其它
