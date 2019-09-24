@@ -1,6 +1,5 @@
 # datan
 
-
 ### 本地构建测试
 
 ```bash
@@ -31,4 +30,20 @@ chart
 
 ### 启动预加载代码块映射测试
 
-docker run -it --rm -p 8888:8888  -v test.py:/root/.ipython/profile_default/startup/01-test.py datan:$1 jupyter notebook --ip='0.0.0.0' --allow-root
+docker run -it --rm -p 8888:8888  -v test.py:/root/.ipython/profile_default/startup/01-test.py datan:${version} jupyter notebook --ip='0.0.0.0' --allow-root
+
+
+### 自动重启
+
+docker run --name datan -d -p 8888:8888 -v test.py:/root/.ipython/profile_default/startup/01-test.py --restart=always datan:${version} jupyter notebook --ip='0.0.0.0' --allow-root
+
+
+### 自动重启并取消密码 
+
+docker run --name datan -d -p 8888:8888 -v jupyter_notebook_config.py:/root/.jupyter/jupyter_notebook_config.py -v test.py:/root/.ipython/profile_default/startup/01-test.py --restart=always datan:${version} jupyter notebook --ip='0.0.0.0' --allow-root
+
+
+### 优势
+
+1. 环境标准，流程标准，随时恢复到可用版本，不用担心环境被pip等导致错乱
+2. 无忧自动重启机制
